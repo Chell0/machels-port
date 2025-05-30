@@ -1,7 +1,7 @@
 import js from '@eslint/js'
-import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
@@ -12,10 +12,18 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parser: tsParser,
+      parserOptions: {
+        project: "./tsconfig.json",
+        tsconfigRootDir: __dirname,
+      },
     },
     plugins: {
+      prettier,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      'simple-import-sort': simleImportSort,
+      '@typescript-eslint': typescriptEslint,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -23,6 +31,27 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+    },
+  },
+
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    rules: {
+      "simple-import-sort/imports": [
+        "error",
+        {
+          groups: [
+            ["^react", "^@?\\w", "^@mui", "^next", "^@emotion", "^@chakra-ui"],
+            ["^(@|components)(/.*|$)", "^sections", "^pages", "^data"],
+            ["^\\u0000"],
+            ["^\\.\\./?$"],
+            ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+            ["^.+\\.?(css)$"],
+          ],
+        },
+      ],
+      "@typescript-eslint/no-unused-vars": "off",
+      "react/display-name": "off",
     },
   },
 )
