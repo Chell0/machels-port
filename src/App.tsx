@@ -26,6 +26,7 @@ const App = () => {
           <div className="container flex items-center justify-between px-4 mx-auto">
             <a
               href="/"
+              rel="noopener noreferrer"
               className="text-2xl font-bold text-indigo-400 transition-colors duration-300 hover:text-indigo-300"
             >
               Machel.dev
@@ -154,6 +155,16 @@ const App = () => {
             </div>
           </div>
         </nav>
+
+        {/* Hero Section */}
+        <section
+          id="home"
+          className="relative flex items-center justify-center min-h-screen pt-20 px-4 text-center overflow-hidden"
+        >
+          <div>
+            <h1>Iam machel!!!</h1>
+          </div>
+        </section>
       </div>
     </>
   );
