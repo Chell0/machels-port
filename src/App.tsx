@@ -1,3 +1,4 @@
+import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
           <div className="container flex items-center justify-between px-4 mx-auto">
             <a
               href="/"
+              rel="noopener noreferrer"
               className="text-2xl font-bold text-indigo-400 transition-colors duration-300 hover:text-indigo-300"
             >
               Machel.dev
@@ -154,6 +156,36 @@ const App = () => {
             </div>
           </div>
         </nav>
+
+        {/* Hero Section */}
+        <section
+          id="home"
+          className="relative flex items-center justify-center min-h-screen pt-20 px-4 text-center overflow-hidden"
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-10"
+            style={{
+              backgroundImage:
+                'url(https://placehold.co/1920x1080/000000/HHHHHH? text=Abstract+Background)',
+            }}
+          ></div>
+          <div className="relative z-10 p-8 bg-gray-800 bg-opacity-70 rounded-xl shadow-2xl max-w-3xl border border-gray-700">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 animate-fade-in-up">
+              Hi, I&apos;m{' '}
+              <span className="text-indigo-400">Machel Odhiambo</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in-up delay-200">
+              A passionate{' '}
+              <span className="font-semibold text-indigo-300">
+                Software Developer
+              </span>{' '}
+              crafting engaging and efficient web applications.
+            </p>
+            <button>
+              View My Work <ChevronDown className="inline-block ml-2 w-5 h-5" />
+            </button>
+          </div>
+        </section>
       </div>
     </>
   );

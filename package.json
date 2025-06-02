@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx && echo '\u001b[1;32mGOOD: Linting passed without any errors!\u001b[0m' || echo '\u001b[1;31mERROR: Linting failed. Please check the output above.\u001b[0m'",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx && echo \"\\x1B[1;32mGOOD: Linting passed without any errors!\\x1B[0m\" || echo \"\\x1B[1;31mERROR: Linting failed!\\x1B[0m\"",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "preview": "vite preview"
   },
@@ -20,6 +20,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-unused-imports": "^4.1.4",
     "jiti": "^2.4.2",
+    "lucide-react": "^0.511.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
