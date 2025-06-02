@@ -1,4 +1,4 @@
-import { Code } from 'lucide-react';
+import { Code, Zap } from 'lucide-react';
 
 const Skills = () => {
   return (
@@ -29,6 +29,27 @@ const Skills = () => {
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
                 Tailwind CSS
+              </li>
+            </ul>
+          </div>
+
+          {/* Backend Skills */}
+          <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700">
+            <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+              <Zap className="mr-3 text-indigo-400" size={28} /> Backend
+            </h3>
+            <ul className="space-y-3 text-gray-300 text-lg">
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                Python (Flask, FastAPI)
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                RESTful APIs
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                CMS (Sanity.io)
               </li>
             </ul>
           </div>
