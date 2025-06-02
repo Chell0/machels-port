@@ -181,7 +181,10 @@ const App = () => {
               </span>{' '}
               crafting engaging and efficient web applications.
             </p>
-            <button>
+            <button
+              onClick={() => scrollToSection('projects')}
+              className="px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 transition-allduration-300 transform hover:scale-105 animate-fade-in-up delay-400"
+            >
               View My Work <ChevronDown className="inline-block ml-2 w-5 h-5" />
             </button>
           </div>
