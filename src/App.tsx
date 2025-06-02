@@ -1,6 +1,8 @@
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
+import About from './components/About';
+
 const App = () => {
   // Navigation State
   const [activeSection, setActiveSection] = useState('home');
@@ -188,6 +190,11 @@ const App = () => {
               View My Work <ChevronDown className="inline-block ml-2 w-5 h-5" />
             </button>
           </div>
+        </section>
+
+        {/* About Me */}
+        <section id="about" className="py-20 px-4 bg-gray-900">
+          <About />
         </section>
       </div>
     </>
