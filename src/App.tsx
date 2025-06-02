@@ -2,6 +2,7 @@ import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 import About from './components/About';
+import Skills from './components/Skills';
 
 const App = () => {
   // Navigation State
@@ -195,6 +196,11 @@ const App = () => {
         {/* About Me */}
         <section id="about" className="py-20 px-4 bg-gray-900">
           <About />
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills" className="py-20 px-4 bg-gray-800">
+          <Skills />
         </section>
       </div>
     </>
