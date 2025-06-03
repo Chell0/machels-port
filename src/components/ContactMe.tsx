@@ -1,3 +1,5 @@
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+
 const ContactMe = () => {
   return (
     <>
@@ -62,6 +64,44 @@ const ContactMe = () => {
               Send Message
             </button>
           </form>
+
+          <div className="mt-12 text-center">
+            <p className="text-gray-300 text-lg mb-4">
+              Or connect with me directly:
+            </p>
+            <div className="flex justify-center space-x-6">
+              <a
+                href="mailto:your.email@example.com"
+                className="text-gray-300 hover:text-indigo-400 transition-colors duration-300"
+              >
+                <Mail size={32} />
+              </a>
+              <a
+                href="https://github.com/chell0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-indigo-400 transition-colors duration-300"
+              >
+                <Github size={32} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/gabrielmachelo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-indigo-400 transition-colors duration-300"
+              >
+                <Linkedin size={32} />
+              </a>
+              <a
+                href="https://x.com/CodeWithChelloh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-indigo-400 transition-colors duration-300"
+              >
+                <Twitter size={32} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </>
