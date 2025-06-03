@@ -183,7 +183,7 @@ const App = () => {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in-up delay-200">
               A passionate{' '}
               <span className="font-semibold text-indigo-300">
-                Software Developer
+                Software Engineer
               </span>{' '}
               crafting engaging and efficient web applications.
             </p>
