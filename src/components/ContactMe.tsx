@@ -1,6 +1,13 @@
+import { useForm, ValidationError } from '@formspree/react';
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 
 const ContactMe = () => {
+  const [state, handleSubmit] = useForm('mdkzojwy');
+
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+
   return (
     <>
       <div className="container mx-auto max-w-3xl">
@@ -14,7 +21,12 @@ const ContactMe = () => {
           </p>
 
           {/* Contact Form */}
-          <form className="space-y-6">
+          <form
+            className="space-y-6"
+            onSubmit={e => {
+              void handleSubmit(e);
+            }}
+          >
             <div>
               <label
                 htmlFor="name"
@@ -39,8 +51,14 @@ const ContactMe = () => {
               <input
                 type="email"
                 id="email"
+                name="email"
                 className="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white"
                 placeholder="your.email@example.com"
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
               />
             </div>
             <div>
@@ -53,12 +71,19 @@ const ContactMe = () => {
               <textarea
                 id="message"
                 rows={5}
+                name="message"
                 className="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white"
                 placeholder="Your message here..."
-              ></textarea>
+              />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
             </div>
             <button
               type="submit"
+              disabled={state.submitting}
               className="w-full px-6 py-3 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105"
             >
               Send Message
