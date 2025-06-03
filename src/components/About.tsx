@@ -15,7 +15,7 @@ const About = () => {
           </div>
           <div className="md:w-2/3 text-lg text-gray-300 leading-relaxed">
             <p className="mb-4">
-              Hello! I&apos;m a dedicated software developer with a strong
+              Hello! I&apos;m a dedicated software engineer with a strong
               passion for building innovative and user-friendly applications. My
               journey in tech began with a fascination for how code can solve
               real-world problems and create impactful digital experiences.
