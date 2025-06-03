@@ -5,7 +5,36 @@ const ContactMe = () => {
   const [state, handleSubmit] = useForm('mdkzojwy');
 
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-8 rounded-2xl shadow-2xl animate-fade-in-up">
+          <p className="text-2xl font-bold text-white text-center mb-2 animate-bounce">
+            🎉 Thank you for reaching out!
+          </p>
+          <p className="text-lg text-white text-center opacity-90 animate-fade-in">
+            I&apos;ll get back to you as soon as possible.
+          </p>
+        </div>
+        <style>
+          {`
+            @keyframes fade-in-up {
+              0% { opacity: 0; transform: translateY(40px);}
+              100% { opacity: 1; transform: translateY(0);}
+            }
+            .animate-fade-in-up {
+              animation: fade-in-up 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+            }
+            @keyframes fade-in {
+              from { opacity: 0; }
+              to { opacity: 1; }
+            }
+            .animate-fade-in {
+              animation: fade-in 1.2s 0.4s both;
+            }
+          `}
+        </style>
+      </div>
+    );
   }
 
   return (
