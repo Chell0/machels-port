@@ -8,7 +8,7 @@ const projects = [
     description:
       'A personal portfolio website to showcase my skills and projects.',
     technologies: ['HTML5', 'CSS3', 'React', 'Tailwind CSS'],
-    imageUrl: '/images/project-placeholder.jpg',
+    imageUrl: '/images/projects/machel.png',
     liveLink: 'https://example.com/portfolio',
     githubLink: 'https://github.com/Chell0/machels-port',
   },
