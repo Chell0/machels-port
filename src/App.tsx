@@ -36,7 +36,7 @@ const App = () => {
               rel="noopener noreferrer"
               className="text-2xl font-bold text-indigo-400 transition-colors duration-300 hover:text-indigo-300"
             >
-              Machel.dev
+              Machel
             </a>
             <div className="hidden space-x-6 md:flex">
               <button
