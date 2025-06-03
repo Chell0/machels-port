@@ -2,6 +2,8 @@ import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 import About from './components/About';
+import ContactMe from './components/ContactMe';
+import Projects from './components/Projects';
 import Skills from './components/Skills';
 
 const App = () => {
@@ -201,6 +203,16 @@ const App = () => {
         {/* Skills Section */}
         <section id="skills" className="py-20 px-4 bg-gray-800">
           <Skills />
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="py-20 px-4 bg-gray-900">
+          <Projects />
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-20 px-4 bg-gray-800">
+          <ContactMe />
         </section>
       </div>
     </>
