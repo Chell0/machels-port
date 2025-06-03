@@ -8,6 +8,7 @@ const projects = [
     description:
       'A personal portfolio website to showcase my skills and projects.',
     technologies: ['HTML5', 'CSS3', 'React', 'Tailwind CSS'],
+    imageUrl: '/images/project-placeholder.jpg',
     liveLink: 'https://example.com/portfolio',
     githubLink: 'https://github.com/Chell0/machels-port',
   },
@@ -17,6 +18,7 @@ const projects = [
     description:
       'A professional web portfolio for an agency, highlighting services and projects.',
     technologies: ['HTML5', 'CSS3', 'JavaScript'],
+    imageUrl: '/images/projects/kazifiti.png',
     liveLink: 'https://kazifiti.com',
     githubLink: 'https://github.com/Chell0/tukoWaksBana',
   },
@@ -32,6 +34,7 @@ const projects = [
       'Sanity.io(CMS)',
       'bun',
     ],
+    imageUrl: '/images/projects/machtbewusst_hamburg.png',
     liveLink: 'https://www.machtbewusst-hamburg.de',
     githubLink: 'https://github.com/Chell0/machtbewwust',
   },
@@ -41,6 +44,7 @@ const projects = [
     description:
       'A web portfolio for a surveyor, showcasing their services and projects.',
     technologies: ['Next', 'TypeScript', 'Tailwind CSS', 'bun'],
+    imageUrl: '/images/projects/charles_ochieng.png',
     liveLink: 'https://charles-ochieng.vercel.app',
     githubLink: 'https://github.com/Chell0/randys-port',
   },
@@ -60,7 +64,7 @@ const Projects = () => {
               className="bg-gray-800 rounded-xl shadow-xl overflow-hidden border border-gray-700 transform hover:scale-102 transition-transform duration-300"
             >
               <img
-                src={`https://placehold.co/600x350/374151/FFFFFF?text=${project.title.replace(/\s/g, '+')}`}
+                src={project.imageUrl}
                 alt={project.title}
                 className="w-full h-56 object-cover"
               />
