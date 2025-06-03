@@ -6,24 +6,48 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx && echo \"\\x1B[1;32mGOOD: Linting passed without any errors!\\x1B[0m\" || echo \"\\x1B[1;31mERROR: Linting failed!\\x1B[0m\"",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@fontsource/inter": "^5.2.5",
+    "@formspree/react": "^3.0.0",
+    "@tailwindcss/vite": "^4.1.8",
+    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "@typescript-eslint/parser": "^8.33.0",
+    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "jiti": "^2.4.2",
+    "lucide-react": "^0.511.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.25.0",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "@vitejs/plugin-react-swc": "^3.9.0",
-    "eslint": "^9.25.0",
+    "@eslint/js": "^9.28.0",
+    "@types/bun": "latest",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react-swc": "^3.10.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "9.28.0",
+    "eslint-plugin-eslint-plugin": "6.4.0",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^16.2.0",
+    "postcss": "^8.5.4",
+    "prettier": "^3.5.3",
+    "tailwindcss": "4.1.8",
+    "tailwindcss-cli": "^0.1.2",
     "typescript": "~5.8.3",
-    "typescript-eslint": "^8.30.1",
+    "typescript-eslint": "^8.33.0",
     "vite": "^6.3.5"
-  }
+  },
+  "trustedDependencies": [
+    "@swc/core",
+    "esbuild"
+  ]
 }
