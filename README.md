@@ -1,6 +1,6 @@
-# Developer Web Portfolio
+# Web Portfolio
 
-- Welcome to **Machel's Web Portfolio!** This repository showcases my skills, projects, and experience as a web developer. It serves as a personal website where potential employers, collaborators, and clients can learn more about me and view my work.
+- This repository showcases my skills, projects, and experience as a software engineer. It serves as a personal website where potential employers, collaborators, and clients can learn more about me and view my work.
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## 🛠️ Technologies Used
 
-- HTML5, CSS3 (TailwindCSS), JavaScript (React.js)
+- HTML5, CSS3, TailwindCSS, React.js, TypeScript
 - Responsive Design with Flexbox/Grid
 - Git & GitHub for version control
 - Deployment via Vercel
@@ -27,10 +27,9 @@
 
 ```
   /src          # Source code for the portfolio website
-    /assets     # Images, icons, and other media
     /components # Reusable UI components
-    /pages      # Different pages of the portfolio
-    /styles     # CSS or styling files
+  /styles       # CSS or styling files
+  /public       # Images, icons, and other media
   README.md     # This file
 ```
 
@@ -41,14 +40,8 @@
 - Mobile-first and fully responsive design
 - Smooth scrolling and navigation
 - Interactive project showcase
-<!-- - Contact form with validation -->
+- Contact form with validation
 - SEO optimized for better visibility
-
----
-
-## 📈 Live Demo
-
-Check out the live version of my portfolio here: [https://comingsoon]
 
 ---
 
@@ -60,6 +53,5 @@ This repository is primarily for personal use, but feel free to fork and customi
 
 ## 📫 Contact Me
 
-- Email: machelgabriel@gmail.com
-- LinkedIn: Your LinkedIn
+- Email: machelodhiambo@gmail.com
 - Twitter: @CodeWithChelloh
