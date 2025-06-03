@@ -63,11 +63,14 @@ const Projects = () => {
               key={project.id}
               className="bg-gray-800 rounded-xl shadow-xl overflow-hidden border border-gray-700 transform hover:scale-102 transition-transform duration-300"
             >
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="w-full h-56 object-cover"
-              />
+              <div className="w-full aspect-[16/10] bg-gray-900">
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-2xl font-semibold text-white mb-3">
                   {project.title}
